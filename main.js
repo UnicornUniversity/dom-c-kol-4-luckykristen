@@ -1,33 +1,65 @@
-  const maleNames = [
+/**
+ * List of male first names.
+ */
+const maleNames = [
      "Jan", "Petr", "Josef", "Pavel", "Martin", "Tomáš", "Miroslav", "František", "Jakub", "Karel",
     "Lukáš", "Jaroslav", "Jiří", "Milan", "Roman", "David", "Václav", "Michal", "Ondřej", "Aleš",
     "Radek", "Zdeněk", "Marek", "Daniel", "Patrik"
   ];
 
+/**
+ * List of female first names.
+ */
   const femaleNames = [
     "Jana", "Marie", "Eva", "Hana", "Anna", "Lenka", "Kateřina", "Lucie", "Věra", "Alena",
     "Petra", "Veronika", "Martina", "Tereza", "Barbora", "Michaela", "Monika", "Zuzana", "Ivana", "Klára",
     "Nikola", "Eliška", "Kristýna", "Adéla", "Simona"
   ];
 
+/**
+ * List of male surnames.
+ */
   const maleSurnames = [
     "Novák", "Svoboda", "Novotný", "Dvořák", "Černý", "Procházka", "Kučera", "Veselý", "Horák", "Němec",
     "Marek", "Pospíšil", "Hájek", "Jelínek", "Král", "Růžička", "Beneš", "Fiala", "Sedláček", "Doležal",
     "Zeman", "Kolář", "Navrátil", "Čermák", "Vaněk"
   ];
 
+/**
+ * List of female surnames.
+ */
   const femaleSurnames = [
     "Nováková", "Svobodová", "Novotná", "Dvořáková", "Černá", "Procházková", "Kučerová", "Veselá", "Horáková", "Němcová",
     "Marková", "Pospíšilová", "Hájková", "Jelínková", "Králová", "Růžičková", "Benešová", "Fialová", "Sedláčková", "Doležalová",
     "Zemanová", "Kolářová", "Navrátilová", "Čermáková", "Vaňková"
   ];
 
+/**
+ * Possible workload values in hours per week.
+ */
   const workloads = [10, 20, 30, 40];
+
+ /**
+* Number of milliseconds in one year.
+*/
   const year_ms = 365.25 * 24 * 60 * 60 * 1000;
 
+  /**
+ * Returns random item from an array.
+ * @param {Array} array Array of values.
+ * @returns {*} Randomly selected item.
+ */
   function getRandomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
+
+
+/**
+ * Generates random birthdate according to minimum and maximum age.
+ * @param {number} minAge Minimum age.
+ * @param {number} maxAge Maximum age.
+ * @returns {string} Birthdate in ISO format.
+ */
 
   function generateBirthdate(minAge, maxAge) {
     const now = Date.now();
@@ -41,6 +73,12 @@
     return new Date(randomBirthdateTime).toISOString();
   }
 
+
+/**
+ * Calculates age from birthdate.
+ * @param {string} birthdate Birthdate in ISO format.
+ * @returns {number} Age as decimal number.
+ */
   function getAge(birthdate) {
     const now = Date.now();
     const birth = new Date(birthdate).getTime();
@@ -48,6 +86,11 @@
     return (now - birth) / year_ms;
   }
 
+/**
+ * Calculates average value from an array of numbers.
+ * @param {number[]} numbers Array of numbers.
+ * @returns {number} Average value.
+ */
   function getAverage(numbers) {
     if (numbers.length === 0) return 0;
 
@@ -55,6 +98,11 @@
     return sum / numbers.length;
   }
 
+/**
+ * Calculates median value from an array of numbers.
+ * @param {number[]} numbers Array of numbers.
+ * @returns {number} Median value.
+ */
   function getMedian(numbers) {
     if (numbers.length === 0) return 0;
 
