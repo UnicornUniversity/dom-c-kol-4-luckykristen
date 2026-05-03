@@ -197,9 +197,9 @@ export function getEmployeeStatistics(employees) {
   dtoOut.workload40 = employees.filter(e => e.workload === 40).length;
   
   dtoOut.averageAge = Number(getAverage(ages).toFixed(1));
-  dtoOut.minAge = Math.round(Math.min(...ages));
-  dtoOut.maxAge = Math.round(Math.max(...ages));
-  dtoOut.medianAge = Math.round(getMedian(ages));
+  dtoOut.minAge = Math.floor(Math.min(...ages));
+  dtoOut.maxAge = Math.floor(Math.max(...ages));
+  dtoOut.medianAge = Math.floor(getMedian(ages));
 
   dtoOut.medianWorkload = getMedian(workloadsArr);
 
