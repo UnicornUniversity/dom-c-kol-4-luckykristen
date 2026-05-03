@@ -17,8 +17,8 @@ const maleNames = [
   ];
 
 /**
-* List of male surnames.
-*/
+ * List of male surnames.
+ */
   const maleSurnames = [
     "Novák", "Svoboda", "Novotný", "Dvořák", "Černý", "Procházka", "Kučera", "Veselý", "Horák", "Němec",
     "Marek", "Pospíšil", "Hájek", "Jelínek", "Král", "Růžička", "Beneš", "Fiala", "Sedláček", "Doležal",
@@ -40,8 +40,8 @@ const maleNames = [
   const workloads = [10, 20, 30, 40];
 
 /**
-* Number of milliseconds in one year.
-*/
+ * Number of milliseconds in one year.
+ */
   const year_ms = 365.25 * 24 * 60 * 60 * 1000;
 
 /**
